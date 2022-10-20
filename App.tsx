@@ -1,6 +1,4 @@
-import Header from './components/shared/Header.component';
-import Login from './components/login/Login.page';
-
+import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
@@ -8,16 +6,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-function Home(props) {
-  const { navigation } = props;
+import Header from './components/shared/Header.component';
+import Login from './components/login/Login.page';
+import Home from './components/home/Home';
 
-  return <View style={styles.innerContainer}>
-    <Text>Home Page ...</Text>
-    <TouchableOpacity onPress={()=> navigation.navigate("Login")}>
-      <Text>Go login...</Text>
-    </TouchableOpacity>
-  </View>
-}
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -47,11 +39,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column'
-  },
-  innerContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
   }
 });
