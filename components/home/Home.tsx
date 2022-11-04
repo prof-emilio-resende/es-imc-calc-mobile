@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
-import Calculator from "./tabs/Calculator.page";
+import Calculator from "./tabs/calculator/Calculator.page";
 
 export function More(props: any) {
     const { navigation } = props;
